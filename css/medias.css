@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #C961A2 ;
+}
+
+.imagenes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px 5px;
+    grid-template-rows: repeat(2, 1fr);
+    width: 400px;
+    position: absolute;
+    left: 220px;
+    
+}
+.imagenes > img{
+    width: 200px;
+    height: 200px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    font-family: 'Big Shoulders Inline Text', cursive;
+    font-family: 'Caprasimo', cursive;
+    font-family: 'Lobster', cursive;
+
+}

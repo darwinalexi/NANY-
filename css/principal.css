@@ -54,9 +54,9 @@ video{
     top: 100px;
 }
 img{
-    width: 200px;
-    height: 200px;
-    border: 3px black solid ;
+    width: 180px;
+    height: 180px;
+    margin:8px ;
 }
 .img:hover{
     cursor: pointer;
@@ -72,30 +72,36 @@ p{
     text-align: center;
     justify-content: center;
 }
-.imagenes{
-    width: 100%;
-    height: 100vh;
+
+.imagenes {
+    width: 100vh;
+    height: 100px; /* Cambié 100vh a 100px para que la cinta no ocupe toda la altura de la pantalla */
     position: absolute;
-    top: 700px;
-    left: -660px;
-    width: 500px;
-    display: grid;
-    grid-template-columns: repeat(3,200px );
-    grid-template-rows: repeat(3, 200px);
-    grid-gap:9px 9px ;
+    top: 750px;
+    left: -110vw; /* Cambié vh a vw para controlar mejor la posición horizontal */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    animation: moveStrip 10s linear infinite; /* Agregué una animación para hacer que la cinta se mueva */
+}
+
+@keyframes moveStrip {
+    0%,100% {
+        transform: translateX(150px);
+    }
+    50%{
+        transform: translateX(-500px);
+    }
+    100% {
+        transform: translateX(500px); /* La cinta se moverá 100vw hacia la derecha */
+    }
 }
 
 h3{
 position: absolute;
-top: 600px;
+top: 650px;
 left: -500px;
-}
-
-
-h5{
-    position: relative;
-    top: 100vh;
-    left: -740px;
+font-family: sans-serif;
 }
 .marcas{
     display: block;
@@ -107,7 +113,7 @@ h5{
 }
 .datos{
     position: absolute;
-    top: 200vh;
+    top: 130vh;
     left: -80vh;
     display: block;
     background-color: #C961A2 ;
@@ -167,17 +173,21 @@ a{
     width: 100px;
     height: 20px;
 }
-.abrir-menu{
-    display: block;
-    background-color: blue;
-    position: absolute;
-    left: 15px;
-    top: -50px;
-    width: 200px;
-    height: 40px;
-}
+
 .catalogo{
-    float: left;
+    position: absolute;
+    top: 400px;
+    left: -2px;
+    margin-right: -13px;
+}
+
+.ultimo{
+    position: absolute;
+    top: 190vh;
+    left: -102vh;
+    background-color: #C961A2;
+    width: 999px;
+    height: 50px;
 }
 
 
